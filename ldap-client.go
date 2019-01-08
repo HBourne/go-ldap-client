@@ -48,7 +48,7 @@ func (lc *LDAPClient) Connect() error {
 			}
 		} else {
 			config := &tls.Config{
-				InsecureSkipVerify: lc.InsecureSkipVerify,
+				InsecureSkipVerify: true,
 				ServerName:         lc.ServerName,
 			}
 			if lc.ClientCertificates != nil && len(lc.ClientCertificates) > 0 {
